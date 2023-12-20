@@ -24,7 +24,7 @@ module SimpleXlsxReader
 
       def initialize(*args)
         super
-        @zip = SimpleXlsxReader::Zip.open_buffer(string_or_io)
+        @zip = SimpleXlsxReader::Zip.open_buffer(string_or_io, create: true)
       end
 
       def read
